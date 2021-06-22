@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React  from "react";
+import InternshipCard from './component/intershipCard';
 function App() {
+  const data = {
+
+    shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc congue nisi vitae suscipit tellus mauris.",
+
+    title: 'Summer Training',
+    poweredBy:
+    {
+      name: "MyhashCode",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png"
+    },
+
+    location:
+    {
+      city: "Jaipur",
+      state: "Rajasthan",
+      remote: false
+    },
+    startDate: "15-07-2021",
+
+    duration:
+    {
+      numOf: 2,
+      units: "Months"
+    },
+    applyBy: "10-07-2021",
+
+    stipend: 10000,
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <InternshipCard data={data} />
+      <InternshipCard data={data} />
+      <InternshipCard data={data} />
+    </>
   );
 }
 
